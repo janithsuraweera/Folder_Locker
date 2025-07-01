@@ -38,15 +38,19 @@ goto End
  
 echo Enter password to Unlock folder
  
-set/p "pass=>"
- 
+:: Masked password input
+set "psfile=%temp%\getpass.vbs"
+echo Set objArgs = WScript.Arguments > "%psfile%"
+echo strInput = InputBox("Enter password to Unlock folder", "Password") >> "%psfile%"
+echo WScript.Echo strInput >> "%psfile%"
+for /f "delims=" %%p in ('cscript //nologo "%psfile%"') do set "pass=%%p"
+del "%psfile%"
+
 if NOT %pass%==janiya goto FAIL
- 
+
 attrib -h -s "Control Panel.{21EC2020-3AEA-1069-A2DD-08002B30309D}"
- 
 ren "Control Panel.{21EC2020-3AEA-1069-A2DD-08002B30309D}" Locker
 
- 
 echo Folder Unlocked successfully
  
 goto End
