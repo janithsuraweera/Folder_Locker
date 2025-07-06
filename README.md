@@ -2,6 +2,28 @@
 
 A simple and effective Windows batch script to lock and protect your important folders with password protection.
 
+## 📖 About
+
+**Folder Locker** is a lightweight Windows utility that provides basic folder protection through password authentication and system-level hiding techniques. This tool is designed for personal use to secure sensitive files and folders on your local system.
+
+### 🎯 Purpose
+- Protect personal files from casual access
+- Hide important folders from plain view
+- Provide a simple password-based security layer
+- No complex installation or configuration required
+
+### 🔧 Technology
+- **Language**: Windows Batch Script (.bat)
+- **Platform**: Windows (All versions)
+- **Dependencies**: Built-in Windows commands only
+- **Security**: Password protection + system folder disguise
+
+### 📊 Project Stats
+- **Lines of Code**: ~109
+- **File Size**: < 5KB
+- **Dependencies**: 0 (Zero external dependencies)
+- **License**: Personal Use
+
 ## 📋 Features
 
 - **Password Protection**: Secure your folders with a customizable password
